@@ -3,3 +3,5 @@ This is second entry
 
 First of all write git status and git add . this function and after git status and show to file 
 and git config --global user.name change to name and git config --global user.email change this write function and after write to the git log to show the name 
+
+what is change in file command git diff file name.txt
