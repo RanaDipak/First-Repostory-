@@ -1,2 +1,10 @@
 I am install to git and version to 2.27.0 
 This is new feture now update
+
+git bash command is
+git add . =This is add file 
+git commit -m "version 1" =This is commit to file
+git config --global user.name "Dipak Rana "
+git config --global user.email "dipakrana2001@gmail.com
+git status =This is show 
+git log =This show to the whose is change file and how many change file 
