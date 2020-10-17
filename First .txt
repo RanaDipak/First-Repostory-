@@ -1,1 +1,2 @@
 This is my first entry and I am start to git now
+This is second entry 
