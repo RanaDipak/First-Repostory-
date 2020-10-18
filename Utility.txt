@@ -8,3 +8,4 @@ git config --global user.name "Dipak Rana "
 git config --global user.email "dipakrana2001@gmail.com
 git status =This is show 
 git log =This show to the whose is change file and how many change file 
+git push origin master =This comman use to push local repostory to server 
