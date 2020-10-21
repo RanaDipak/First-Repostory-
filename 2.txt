@@ -1,0 +1,16 @@
+I am make to git master branch and I am start learning now 
+git inint 
+ls -al
+git status 
+git add .
+git commit -m "message"
+git log 
+git diff
+git push origin branch name
+git reset 
+git checkout .
+git remote add origin apply to link
+git push -u origin master
+git branch
+git checkout branch name 
+git branch -d branch name 
