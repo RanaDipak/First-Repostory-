@@ -1,0 +1,20 @@
+1. create table table_name (new column_name <data_Type>(size),.............);
+2. insert table table_name(new column_name <data_Type>(size),.............);
+3. select * from table_name ;
+4. desc table_no;
+5. alter table table_name add primary key column_name;
+6. alter table table_name add contraints column_name foreign key(primary key to column name) references table_name(primary key to column_name)
+7. alter table table_name modify ( column_name <data_Type>(size),.............);
+8. drop table table_name
+9. rename old_table_name to new_table_name
+10. delete from  table_name 
+11. delete from table_name where column_name;
+12. update table_name set column_name =change values where conditon
+13. Altertable<TableName>add(<newColumnName><Datatype>(<size>),<newColumnName><Datatype>(<size>).....)
+14. Altertable<TableName>dropcolumn<ColumnName>
+15. Truncatetable<TableName>
+16. <ColumnName><DataType>(<Size>)References<TableName>[(<ColumnName>)]
+
+17. <ColumnName><DataType>(<Size>)References<TableName>[(<ColumnName>)] on delete cascade (this method to table is deleted and child table recode also be deleted )
+
+18. <ColumnName><DataType>(<Size>)References<TableName>[(<ColumnName>)] on delete set null (this method to table is deleted and child table recode also be null )
