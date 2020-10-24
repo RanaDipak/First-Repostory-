@@ -12,55 +12,61 @@ struct node *createNode()
     n = (struct node *)malloc(sizeof(struct node));
     return (n);
 }
-void insertNode()
+int insertNode()
 {
-    struct node *temp, *t;
-    temp = createNode();
-    printf("\nEnter your number : ");
-    scanf("%d", &temp->info);
-    temp->link = NULL;
+    struct node *temp, *t,*pred,*first;
+    
     if (start == NULL)
     {
+        temp = createNode();
+        printf("\nEnter your number : ");
+        scanf("%d", &temp->info);
+        temp->link = NULL;
         start = temp;
     }
-    // else
-    // {
-    //     t = start;
-    //     while (t->link != NULL)
-    //     {
-    //         t = t->link;
-    //     }
-    //     t->link = temp;
-    // }
-
-    struct node *first;
-    first = start;
-    if (first == NULL)
+    else
     {
-        temp->link = NULL;
-        //   return temp;
+        temp = createNode();
+        printf("\nEnter your number : ");
+        scanf("%d", &temp->info);
+        // temp->link = NULL;
+        
+    // struct node *first;
+    first = start;
+
+    if (first->link == NULL)
+    {
+        temp->link = NULL;                  //OK
+        first->link=temp;
+        return 0;
     }
+
     if (temp->info <= first->info)
     {
-        temp->link = first;
-        //   return temp;
+        temp->link = first;                 //OK
+        start=temp;
+        return 0;
     }
     struct node *save;
     save = first;
-    while (save->link != NULL & temp->info >= (save->link)->info)
+    while (save->link != NULL & temp->info >= save->info)
     {
-        save = save->link;
+        save = save->link;                      //OK
+        
     }
-    temp->link = save->link;
-    save->link = temp;
-    // return first;
-
-      t = start;
-        while (t->link != NULL)
-        {
-            t = t->link;
-        }
-        t->link = temp;
+    // if(save->link==NULL & temp->info >= save->info){
+    //         save->link=temp;
+    //         temp->link=NULL;
+    //         return 0;                    //OK
+    //     }
+    // else
+        
+             temp->link = save->link;
+            save->link = temp;
+            
+         
+       }
+        
 }
 
 
