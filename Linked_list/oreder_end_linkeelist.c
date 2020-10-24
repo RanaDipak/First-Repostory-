@@ -36,37 +36,36 @@ int insertNode()
 
     if (first->link == NULL)
     {
-        temp->link = NULL;                  //OK
+        temp->link = NULL;              
         first->link=temp;
         return 0;
     }
 
     if (temp->info <= first->info)
     {
-        temp->link = first;                 //OK
+        temp->link = first;                 
         start=temp;
         return 0;
     }
     struct node *save;
     save = first;
+    
     while (save->link != NULL & temp->info >= save->info)
     {
-        save = save->link;                      //OK
-        
+        pred=save;
+        save = save->link; 
+            
     }
-    // if(save->link==NULL & temp->info >= save->info){
-    //         save->link=temp;
-    //         temp->link=NULL;
-    //         return 0;                    //OK
-    //     }
-    // else
-        
+    if(save->link!=NULL & temp->info<=save->info){
+            
+            pred->link=temp;
+            temp->link=save;
+            return 0;
+    }
              temp->link = save->link;
             save->link = temp;
-            
-         
        }
-        
+        // return (first);
 }
 
 
