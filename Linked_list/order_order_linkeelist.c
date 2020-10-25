@@ -12,6 +12,7 @@ struct node *createNode()
     n = (struct node *)malloc(sizeof(struct node));
     return (n);
 }
+                                            // INSERT NODE
 int insertNode()
 {
     struct node *temp, *t,*pred,*first;
@@ -64,25 +65,46 @@ int insertNode()
     }
              temp->link = save->link;
             save->link = temp;
-       }
-        // return (first);
+       }       
 }
 
 
+                                // DELETE NODE
 
-
-void deleteNode()
-{
-    struct node *r;
-    if (start == NULL)
-        printf("\t\t<<<List is empty.>>>");
+void deleteNode(){
+    struct node *r,*del,*save,*pred,*first;
+    if(start==NULL){
+        printf("Node is empty.");
+    }
     else
     {
-        r = start;
-        start = start->link;
-        free(r);
-    }
+        int x;
+        printf("Enter you delete number : ");
+        scanf("%d",&x);
+
+        save=start;
+        first=save;
+       
+       while(save->info!=x & save->link!=NULL){
+           pred=save;
+           save=save->link;
+       }
+       if(save->info!=x){
+           printf("Node is not found .");
+       }
+        if(x==first->info){
+            first=first->link;
+            start=first;
+        }
+        else
+        {
+            pred->link=save->link;
+        }
+        free(save);       
+    }    
 }
+                                // VIEW NODE
+
 void viewList()
 {
     struct node *t;
