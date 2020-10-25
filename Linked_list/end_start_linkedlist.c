@@ -52,18 +52,25 @@ void insertNode(){
 
                         // DELETE NODE
 void deleteNode(){
-    struct node *r;
-    if(start==NULL)
-    printf("\t\t<<<List is empty.>>>");
-    else{
+    struct node *r,*del;
+    if(start==NULL){
+        printf("Node is empty.");
+    }
+    else
+    {
         r=start;
-        start=start->link;
+        while(r->link!=NULL){
+            del=r;
+            r=r->link;
+        }
+        del->link=NULL;
         free(r);
     }
+    
 }
 
                             // DESPLAY NODE
-void viewList(){
+int  viewList(){
     struct node *t;
     if(start==NULL)
     printf("\t\t<<<List is empty.>>>");
@@ -74,6 +81,9 @@ void viewList(){
         while(t!=NULL){
             printf("%d  ",t->info);
             t=t->link;
+        }
+        if(t==NULL){
+            return 0;
         }
     }
 }
