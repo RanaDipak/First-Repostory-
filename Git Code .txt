@@ -1,4 +1,4 @@
-I am make to git master branch and I am start learning now 
+.I am make to git master branch and I am start learning now 
 git inint 
 ls -al
 git status 
