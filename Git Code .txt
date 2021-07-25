@@ -14,3 +14,4 @@ git push -u origin master
 git branch
 git checkout branch name 
 git branch -d branch name 
+git config --global user.email "Dipak Rana"

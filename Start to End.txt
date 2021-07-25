@@ -1,0 +1,27 @@
+git --version
+git init -> make to hide .git folder
+git ls
+git config --global user.name "nmae" -> add name
+git config --global user.email "abc@gmail.com" -> add email
+git status -> check to local sever add or not 
+git add .  -> add to local server
+git commit -m -> add comment 
+git branch -M branch_name -> change branch name
+git remtoe add origin add_repository -> which repository to add 					this file.
+git push -u origin branch_name -> move to file to added 
+
+-----how to connect local computer to github site and how to 	generate ssh key --------
+ssh-keygen -t ed25519 -C "your_email@example.com" -> update your 		email id and then enter
+eval "$(ssh-agent -s)" -> to generate pid 
+ssh-add ~/.ssh/id_ed25519 -> added to ssh key
+clip < ~/.ssh/id_ed25519.pub -> this to run and copy ssh key and paste to the github new ssh key to add copy ssh key and submit. 
+
+-----Your are not connect to local to github site ----
+! [rejected]        master -> master (non-fast-forward)
+error: failed to push some refs to 'git@github.com:asantoya/projectnewbies.git'
+To prevent you from losing history, non-fast-forward updates were rejected
+Merge the remote changes (e.g. 'git pull') before pushing again.  See the
+'Note about fast-forwards' section of 'git push --help' for details.
+
+This type of error occur to run this command
+git push --force <remote_repository>
